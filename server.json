@@ -1,0 +1,92 @@
+{
+    "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+    "name": "io.github.andreasjhagen/imap-email",
+    "description": "MCP server for reading, searching, drafting, and sending emails via IMAP/SMTP",
+    "version": "1.0.1",
+    "icons": [
+        {
+            "src": "https://raw.githubusercontent.com/andreasjhagen/OpenAgent-MCPs/main/mcp-imap-email/icon.png",
+            "mimeType": "image/png"
+        }
+    ],
+    "packages": [
+        {
+            "registryType": "npm",
+            "identifier": "@cynosure-mcp/imap-email",
+            "version": "1.0.1",
+            "transport": {
+                "type": "stdio"
+            },
+            "environmentVariables": [
+                {
+                    "name": "IMAP_HOST",
+                    "description": "IMAP server hostname (e.g., imap.gmail.com)",
+                    "isRequired": true,
+                    "format": "string",
+                    "isSecret": false
+                },
+                {
+                    "name": "IMAP_PORT",
+                    "description": "IMAP server port (default: 993)",
+                    "isRequired": false,
+                    "format": "number",
+                    "isSecret": false
+                },
+                {
+                    "name": "IMAP_USER",
+                    "description": "IMAP login username / email address",
+                    "isRequired": true,
+                    "format": "string",
+                    "isSecret": false
+                },
+                {
+                    "name": "IMAP_PASSWORD",
+                    "description": "IMAP login password or app-specific password",
+                    "isRequired": true,
+                    "format": "string",
+                    "isSecret": true
+                },
+                {
+                    "name": "SMTP_HOST",
+                    "description": "SMTP server hostname (e.g., smtp.gmail.com). Falls back to IMAP_HOST if not set.",
+                    "isRequired": false,
+                    "format": "string",
+                    "isSecret": false
+                },
+                {
+                    "name": "SMTP_PORT",
+                    "description": "SMTP server port (default: 587)",
+                    "isRequired": false,
+                    "format": "number",
+                    "isSecret": false
+                },
+                {
+                    "name": "SMTP_USER",
+                    "description": "SMTP login user. Falls back to IMAP_USER if not set.",
+                    "isRequired": false,
+                    "format": "string",
+                    "isSecret": false
+                },
+                {
+                    "name": "SMTP_PASSWORD",
+                    "description": "SMTP login password. Falls back to IMAP_PASSWORD if not set.",
+                    "isRequired": false,
+                    "format": "string",
+                    "isSecret": true
+                },
+                {
+                    "name": "EMAIL_FROM",
+                    "description": "Default From address for sending (falls back to IMAP_USER)",
+                    "isRequired": false,
+                    "format": "string",
+                    "isSecret": false
+                }
+            ]
+        }
+    ],
+    "repository": {
+        "url": "https://github.com/andreasjhagen/OpenAgent-MCPs",
+        "source": "github",
+        "subfolder": "mcp-imap-email"
+    }
+}

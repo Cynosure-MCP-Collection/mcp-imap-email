@@ -1,0 +1,47 @@
+{
+    "name": "@cynosure-mcp/imap-email",
+    "mcpName": "io.github.andreasjhagen/imap-email",
+    "version": "1.0.1",
+    "description": "MCP server for reading, searching, drafting, and sending emails via IMAP/SMTP",
+    "type": "module",
+    "main": "dist/index.js",
+    "bin": {
+        "imap-email": "dist/index.js"
+    },
+    "scripts": {
+        "build": "tsc",
+        "start": "node dist/index.js",
+        "dev": "tsx src/index.ts"
+    },
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.27.1",
+        "imapflow": "^1.2.16",
+        "mailparser": "^3.9.4",
+        "nodemailer": "^8.0.3",
+        "zod": "^3.24.0"
+    },
+    "devDependencies": {
+        "@types/mailparser": "^3.4.6",
+        "@types/node": "^22.0.0",
+        "@types/nodemailer": "^6.4.17",
+        "tsx": "^4.19.0",
+        "typescript": "^5.7.0"
+    },
+    "files": [
+        "dist",
+        "server.json",
+        "icon.png"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "keywords": [
+        "mcp",
+        "model-context-protocol",
+        "email",
+        "imap",
+        "smtp",
+        "mail",
+        "ai"
+    ]
+}
