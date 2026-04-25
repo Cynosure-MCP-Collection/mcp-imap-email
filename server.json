@@ -5,7 +5,7 @@
     "version": "1.0.1",
     "icons": [
         {
-            "src": "https://raw.githubusercontent.com/andreasjhagen/OpenAgent-MCPs/main/mcp-imap-email/icon.png",
+            "src": "https://raw.githubusercontent.com/andreasjhagen/Cynosure-MCPs/main/mcp-imap-email/icon.png",
             "mimeType": "image/png"
         }
     ],
@@ -85,7 +85,7 @@
         }
     ],
     "repository": {
-        "url": "https://github.com/andreasjhagen/OpenAgent-MCPs",
+        "url": "https://github.com/andreasjhagen/Cynosure-MCPs",
         "source": "github",
         "subfolder": "mcp-imap-email"
     }
