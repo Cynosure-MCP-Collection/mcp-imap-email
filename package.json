@@ -1,7 +1,7 @@
 {
   "name": "@cynosure-mcp/imap-email",
   "mcpName": "io.github.andreasjhagen/imap-email",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "MCP server for reading, searching, drafting, and sending emails via IMAP/SMTP",
   "type": "module",
   "main": "dist/index.js",
