@@ -126,6 +126,7 @@ const server = new McpServer({
 server.registerTool(
     'list_folders',
     {
+        annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true },
         description: 'List all mailbox folders with message counts',
     },
     async () => {
@@ -153,6 +154,7 @@ server.registerTool(
 server.registerTool(
     'list_emails',
     {
+        annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true },
         description: 'List emails in a folder (headers only — context-efficient). Returns newest first.',
         inputSchema: {
             folder: z.string().default('INBOX').describe('Mailbox folder path'),
@@ -196,6 +198,7 @@ server.registerTool(
 server.registerTool(
     'get_email',
     {
+        annotations: { readOnlyHint: false, destructiveHint: true, idempotentHint: true, openWorldHint: true },
         description: 'Get full email content by UID. Returns parsed text body, HTML flag, attachments metadata.',
         inputSchema: {
             folder: z.string().default('INBOX').describe('Mailbox folder path'),
@@ -269,6 +272,7 @@ server.registerTool(
 server.registerTool(
     'search_emails',
     {
+        annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true },
         description: 'Search emails in a folder. Returns headers only (context-efficient). Supports from, to, subject, body, date filters, flags.',
         inputSchema: {
             folder: z.string().default('INBOX').describe('Mailbox folder path'),
@@ -331,6 +335,7 @@ server.registerTool(
 server.registerTool(
     'send_email',
     {
+        annotations: { readOnlyHint: false, destructiveHint: true, idempotentHint: false, openWorldHint: true },
         description: 'Send an email via SMTP',
         inputSchema: {
             to: z.string().describe('Recipient email address(es), comma-separated'),
@@ -379,6 +384,7 @@ server.registerTool(
 server.registerTool(
     'create_draft',
     {
+        annotations: { readOnlyHint: false, destructiveHint: true, idempotentHint: false, openWorldHint: true },
         description: 'Save a draft email to the Drafts folder via IMAP APPEND',
         inputSchema: {
             to: z.string().describe('Recipient email address(es), comma-separated'),
@@ -435,6 +441,7 @@ server.registerTool(
 server.registerTool(
     'move_email',
     {
+        annotations: { readOnlyHint: false, destructiveHint: true, idempotentHint: false, openWorldHint: true },
         description: 'Move an email to another folder',
         inputSchema: {
             folder: z.string().default('INBOX').describe('Source folder'),
@@ -465,6 +472,7 @@ server.registerTool(
 server.registerTool(
     'flag_email',
     {
+        annotations: { readOnlyHint: false, destructiveHint: true, idempotentHint: true, openWorldHint: true },
         description: 'Set or remove flags on an email (e.g. \\Seen, \\Flagged, \\Answered, \\Deleted)',
         inputSchema: {
             folder: z.string().default('INBOX').describe('Mailbox folder path'),
@@ -504,6 +512,7 @@ server.registerTool(
 server.registerTool(
     'delete_email',
     {
+        annotations: { readOnlyHint: false, destructiveHint: true, idempotentHint: true, openWorldHint: true },
         description: 'Delete an email (moves to Trash or permanently deletes)',
         inputSchema: {
             folder: z.string().default('INBOX').describe('Mailbox folder path'),
@@ -545,6 +554,7 @@ server.registerTool(
 server.registerTool(
     'get_attachment',
     {
+        annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true },
         description: 'Download a specific attachment from an email by body part number. Returns base64-encoded content.',
         inputSchema: {
             folder: z.string().default('INBOX').describe('Mailbox folder path'),
