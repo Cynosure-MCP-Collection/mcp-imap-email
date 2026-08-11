@@ -2,10 +2,10 @@
     "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
     "name": "io.github.andreasjhagen/imap-email",
     "description": "MCP server for reading, searching, drafting, and sending emails via IMAP/SMTP",
-    "version": "1.0.1",
+    "version": "1.0.4",
     "icons": [
         {
-            "src": "https://raw.githubusercontent.com/andreasjhagen/Cynosure-MCPs/main/mcp-imap-email/icon.png",
+            "src": "https://unpkg.com/@cynosure-mcp/imap-email@1.0.4/icon.png",
             "mimeType": "image/png"
         }
     ],
@@ -13,7 +13,7 @@
         {
             "registryType": "npm",
             "identifier": "@cynosure-mcp/imap-email",
-            "version": "1.0.1",
+            "version": "1.0.4",
             "transport": {
                 "type": "stdio"
             },
