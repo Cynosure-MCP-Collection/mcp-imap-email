@@ -43,5 +43,13 @@
     "smtp",
     "mail",
     "ai"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cynosure-MCP-Collection/mcp-imap-email.git"
+  },
+  "homepage": "https://github.com/Cynosure-MCP-Collection/mcp-imap-email#readme",
+  "bugs": {
+    "url": "https://github.com/Cynosure-MCP-Collection/mcp-imap-email/issues"
+  }
 }

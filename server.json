@@ -85,8 +85,7 @@
         }
     ],
     "repository": {
-        "url": "https://github.com/andreasjhagen/Cynosure-MCPs",
-        "source": "github",
-        "subfolder": "mcp-imap-email"
+        "url": "https://github.com/Cynosure-MCP-Collection/mcp-imap-email",
+        "source": "github"
     }
 }
